@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import { FaCuttlefish, FaCode, FaJava, FaPython,FaMicrosoft } from "react-icons/fa";
+import { FaCuttlefish, FaCode, FaJava, FaMicrosoft } from "react-icons/fa";
 
 const learnCourses = [
   { icon: <FaCuttlefish className="course-icon" />, title: "C Programming", desc: "Master the foundations of programming in C.", link: "/learnc" },
-   { icon: <FaCode className="course-icon" />, title: "C Programming-Lab", desc: "Transform Ideas into Programs with C Programming.", link: "/clablandingpage" },
-  { icon: <FaCode className="course-icon" />, title: "C++ Programming", desc: "Learn object-oriented programming with C++.", link: "/ComingSoon" },
-  { icon: <FaJava className="course-icon" />, title: "Java Programming", desc: "Build robust and scalable applications in Java.", link: "/ComingSoon" },
+   { icon: <FaCode className="course-icon" />, title: "C Programming-Lab", desc: "Transform Ideas into Programs with C Programming.", link: "/c-lab" },
+  { icon: <FaCode className="course-icon" />, title: "C++ Programming", desc: "Learn object-oriented programming with C++.", link: "/coming-soon" },
+  { icon: <FaJava className="course-icon" />, title: "Java Programming", desc: "Build robust and scalable applications in Java.", link: "/coming-soon" },
    { icon: <FaMicrosoft className="course-icon" />, title: "Window Programming using VB.Net", desc: "Learn Vb.Net for developing window Applications", link: "/vbnetmainpage" }
 ];
 
 const practiceCourses = [
-  { title: "Mathematics", img: "/maths.jpg", link: "/ComingSoon" },
+  { title: "Mathematics", img: "/maths.jpg", link: "/coming-soon" },
   { title: "Gamification", img: "/gamification.jpg", link: "/gamedashboard" },
   { title: "Computer Studies", img: "/learncomputer.jpg", link: "/videolectures" },
-  { title: "Languages", img: "/lang.jpg", link: "/ComingSoon" }
+  { title: "Languages", img: "/lang.jpg", link: "/coming-soon" }
 ];
 
 export default function Home() {

@@ -167,8 +167,11 @@ int main() {
           mt: 4,
         }}
       >
-        <Button variant="contained" color="primary" onClick={() => navigate(-1)}>
+        <Button variant="contained" color="primary" onClick={() => navigate('/learnc/loops')}>
           Back
+        </Button>
+        <Button variant="contained" color="primary" onClick={() => navigate('/learnc/partialcode')}>
+          Next
         </Button>
         </Box>
     </Container>

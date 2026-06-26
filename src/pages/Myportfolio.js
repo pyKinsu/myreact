@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -41,6 +42,7 @@ const research = [
 const PortfolioPage = () => {
   const projectsRef = useRef(null);
   const researchRef = useRef(null);
+  const navigate = useNavigate();
 
   const scrollTo = (ref) => ref.current.scrollIntoView({ behavior: 'smooth' });
 
@@ -60,7 +62,7 @@ const PortfolioPage = () => {
         <div className="hero-buttons">
           <button onClick={() => scrollTo(projectsRef)}>Projects</button>
           <button onClick={() => scrollTo(researchRef)}>Research</button>
-          <button onClick={() => window.location.href = "/contactcard"}>Reach Me</button>
+          <button onClick={() => navigate("/contact")}>Reach Me</button>
         </div>
       </section>
 

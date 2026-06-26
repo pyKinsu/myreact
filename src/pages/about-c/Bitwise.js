@@ -214,11 +214,13 @@ int main() {
       </Typography>
     
       {/* Navigation Buttons */}
-      <Box sx={{ mt: 5, display: 'flex', justifyContent: 'space-between' }}>
-        <Button variant="contained" color="primary" onClick={() => navigate(-1)}>
+      <Box sx={{ mt: 5, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 2 }}>
+        <Button variant="outlined" color="primary" onClick={() => navigate('/learnc/logical')}>
           Back
         </Button>
-        {/* You can optionally add a “Next” button here */}
+        <Button variant="contained" color="primary" onClick={() => navigate('/learnc/increment')}>
+          Next
+        </Button>
       </Box>
     </Box>
   );

@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FaCode,
-  FaSearch,
   FaLaptopCode,
   FaTrophy,
   FaBookOpen,
@@ -18,7 +17,7 @@ export default function ClabLandingPage() {
       title: "C Basics",
       count: 25,
       color: "bg-blue-500",
-      path: "/c-lab/CBasicsPage",
+      path: "/c-lab/c-basics",
     },
     {
       title: "Operators",

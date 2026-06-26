@@ -18,10 +18,9 @@ const Identifier = () => {
           </Typography>
 <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
   <img
-    src="/identifier.png"  // <-- Place your image inside the public folder or use a URL
+    src="/identifier.png"
     alt="Identifier Example"
-    width="300"
-    style={{ borderRadius: '12px' }}
+    style={{ width: '300px', maxWidth: '100%', height: 'auto', borderRadius: '12px' }}
   />
 </Box>
           <Typography variant="h6" gutterBottom color="secondary">

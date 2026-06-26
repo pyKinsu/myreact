@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Box,
   Button,
@@ -84,25 +84,14 @@ export default function CGameArena() {
 
   const totalLevels = 4;
 
-  // Timer countdown
-  useEffect(() => {
-    if (showLevelTransition || gameOver) return;
-    if (timeLeft === 0) {
-      handleNext();
-      return;
-    }
-    const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [timeLeft, showLevelTransition, gameOver]);
-
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (selected !== "" && parseInt(selected) === levelsData[level][currentQ].answer) {
-      setScore(score + 10);
+      setScore((s) => s + 10);
     }
     setSelected("");
 
     if (currentQ + 1 < levelsData[level].length) {
-      setCurrentQ(currentQ + 1);
+      setCurrentQ((q) => q + 1);
       setTimeLeft(20);
     } else {
       // Level complete
@@ -113,7 +102,18 @@ export default function CGameArena() {
         setGameOver(true);
       }
     }
-  };
+  }, [selected, level, currentQ]);
+
+  // Timer countdown
+  useEffect(() => {
+    if (showLevelTransition || gameOver) return;
+    if (timeLeft === 0) {
+      handleNext();
+      return;
+    }
+    const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [timeLeft, showLevelTransition, gameOver, handleNext]);
 
   const startNextLevel = () => {
     setLevel(level + 1);

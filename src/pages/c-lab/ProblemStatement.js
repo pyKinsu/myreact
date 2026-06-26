@@ -22,7 +22,7 @@ export default function ProblemStatement() {
         <div className="bg-white rounded-3xl shadow-xl p-8">
 
   <button
-    onClick={() => navigate("/c-lab/CBasicsPage")}
+    onClick={() => navigate("/c-lab/c-basics")}
     className="mb-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg"
   >
     ← Back to Programs

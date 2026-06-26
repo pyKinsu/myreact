@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Box, Typography, RadioGroup, FormControlLabel, Radio, Button, Grid, Paper } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 export default function FunctionMCQ() {
-  const navigate = useNavigate();
 
   const questions = [
     // User-defined function MCQs

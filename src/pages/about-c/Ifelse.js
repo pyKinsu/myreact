@@ -159,7 +159,7 @@ int main() {
         <pre>{`Both positive`}</pre>
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 5 }}>
-        <Button variant="outlined" onClick={() => navigate(-1)}>
+        <Button variant="outlined" onClick={() => navigate('/learnc/controlstructure')}>
           Back
         </Button>
         <Button variant="contained" onClick={() => navigate('/learnc/switchcase')}>

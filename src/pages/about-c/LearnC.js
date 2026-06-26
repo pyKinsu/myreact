@@ -32,9 +32,19 @@ const lessons = [
       { label: "Variables", path: "variables" },
       { label: "Expressions and Statements", path: "expression" },
       { label: "Operators", path: "operator" },
+      { label: "Assignment Operators", path: "assignment" },
+      { label: "Relational Operators", path: "relational" },
+      { label: "Logical Operators", path: "logical" },
+      { label: "Bitwise Operators", path: "bitwise" },
+      { label: "Increment & Decrement Operators", path: "increment" },
       { label: "Control Structure", path: "controlstructure" },
+      { label: "If-Else", path: "ifelse" },
+      { label: "Switch-Case", path: "switchcase" },
+      { label: "Loops", path: "loops" },
+      { label: "Jumping Statements", path: "jumpingstatements" },
+      { label: "Debug Practice: PIN Verification", path: "partialcode" },
       { label: "MCQs", path: "practiceq" },
-      
+      { label: "Bonus: C Game Arena", path: "otherop" },
       { label: "C-Programs-Chapter-1", path: "chapter1" },
     ],
   },
@@ -77,6 +87,7 @@ const lessons = [
     items: [
       { label: "Unions in C", path: "union" },
       { label: "Structure vs Union", path: "unionstructure" },
+      { label: "Enum in C", path: "enum" },
     ],
   },
   {
@@ -100,12 +111,12 @@ const lessons = [
   {
     group: "Preprocessor",
     items: [
-      { label: " # define statement", path: "hashdefine" },
-      { label: "Functional Macros", path: "functionalmacros" },
-      { label: "using # include ", path: "hashinclude" },
-    { label: "using #ifdef", path: "hashifdef" },
-        { label: "Other Preprocessor Commands", path: "otherpreprocessor" },
-         { label: "Macros Vs Functions", path: "macrofunction" },
+      { label: " # define statement", path: "/coming-soon" },
+      { label: "Functional Macros", path: "/coming-soon" },
+      { label: "using # include ", path: "/coming-soon" },
+      { label: "using #ifdef", path: "/coming-soon" },
+      { label: "Other Preprocessor Commands", path: "/coming-soon" },
+      { label: "Macros Vs Functions", path: "/coming-soon" },
     ],
   },
 ];
@@ -125,7 +136,7 @@ const LearnC = () => {
         </Typography>
         <ul className="sub-list">
           {section.items.map((lesson) => (
-            <li key={lesson.path}>
+            <li key={`${section.group}-${lesson.label}`}>
               <Link to={lesson.path}>{lesson.label}</Link>
             </li>
           ))}
@@ -196,7 +207,7 @@ const LearnC = () => {
                     {section.items.map((lesson) => (
                       <ListItem
                         button
-                        key={lesson.path}
+                        key={`${section.group}-${lesson.label}`}
                         component={Link}
                         to={lesson.path}
                       >

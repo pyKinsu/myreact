@@ -83,6 +83,7 @@ import ProblemStatement from "./pages/c-lab/ProblemStatement";
 import ComingSoon from "./pages/ComingSoon";
 import Gamedashboard from "./pages/Gamedashboard";
 import Myportfolio from "./pages/Myportfolio";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -156,8 +157,8 @@ function App() {
           <Route path="fileoperations" element={<Fileoperation />} />
           <Route path="sequentialrandom" element={<Sequentialrandom />} />
         </Route>
-       <Route path="/clablandingpage" element={<ClabLandingPage />} />
-       <Route path="/c-lab/CBasicsPage" element={<CBasicsPage />} />
+       <Route path="/c-lab" element={<ClabLandingPage />} />
+       <Route path="/c-lab/c-basics" element={<CBasicsPage />} />
        <Route
   path="/c-program/:id"
   element={<ProgramDetail />}
@@ -167,15 +168,16 @@ function App() {
   element={<ProblemStatement />}
 />
         <Route path="/videolectures" element={<Videolectures />} />
-        <Route path="/ComingSoon" element={<ComingSoon />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/myportfolio" element={<Myportfolio />} />
         <Route path="/gamedashboard" element={<Gamedashboard />} />
 
-        <Route path="/contactcard" element={<ContactCard />} />
+        <Route path="/contact" element={<ContactCard />} />
         <Route path="/about-project" element={<AboutPage />} />
         <Route path="/towerofhanoi" element={<Towerofhanoi numDisks={3} />} />
         <Route path="/computerbuilder" element={<Computerbuilder />} />
         <Route path="/codejumble" element={<Codejumble />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
   </ErrorBoundary>

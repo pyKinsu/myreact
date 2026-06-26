@@ -16,7 +16,7 @@ const Datatypes = () => {
         Suppose we have a mix of dry fruits. It is very difficult to separate individual dry fruits from the mix. So, it is better to arrange them in different containers to make the process easier. Data types work in a similar way—we define a data type according to the kind of data, just like choosing the right container based on the item. This helps store data efficiently according to its size and type.
       </Typography>
 
-<Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mb: 4 }}>
+<Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 4, mb: 4 }}>
 <ImageCard 
   src="/dryfruits.png" 
   alt="Mix Dry Fruits" 

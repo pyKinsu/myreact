@@ -95,14 +95,25 @@ const TowerofHanoi = ({ numDisks = 3 }) => {
         <p>Click one tower to pick a disk, then click another to place it.</p>
         <p><strong>Moves:</strong> {moveCount}</p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '30px' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: '20px',
+            marginTop: '30px',
+            padding: '0 10px',
+            maxWidth: '100%',
+            overflowX: 'auto',
+          }}
+        >
           {towers.map((tower, idx) => (
             <div
               key={idx}
               onClick={() => handleTowerClick(idx)}
               style={{
                 border: selectedTower === idx ? '3px solid orange' : '2px solid gray',
-                width: '120px',
+                width: 'min(120px, 28vw)',
                 height: '240px',
                 display: 'flex',
                 flexDirection: 'column-reverse',
@@ -112,13 +123,14 @@ const TowerofHanoi = ({ numDisks = 3 }) => {
                 backgroundColor: '#f5f5f5',
                 borderRadius: '8px',
                 boxShadow: '0px 2px 6px rgba(0,0,0,0.1)',
+                flexShrink: 0,
               }}
             >
               {tower.map((disk, i) => (
                 <div
                   key={i}
                   style={{
-                    width: `${disk * 20}px`,
+                    width: `min(${disk * 20}px, ${disk * 7}vw)`,
                     height: '20px',
                     backgroundColor: '#2a9d8f',
                     margin: '3px',

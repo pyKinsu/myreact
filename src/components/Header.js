@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -116,6 +117,11 @@ const Header = () => {
           height: 24px;
         }
 
+        /* Mobile menu backdrop */
+        .backdrop {
+          display: none;
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
           .menu-icon {
@@ -123,6 +129,15 @@ const Header = () => {
             align-items: center;
             justify-content: center;
             color: #333;
+          }
+
+          .backdrop.show {
+            display: block;
+            position: fixed;
+            inset: 0;
+            top: 60px;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
           }
 
           .nav-links {
@@ -206,7 +221,7 @@ const Header = () => {
           >
             {navItems.map((item) => (
               <li key={item.label}>
-                <a href={item.href} onClick={() => setIsOpen(false)}>
+                <Link to={item.href} onClick={() => setIsOpen(false)}>
                   <span className="nav-icon">
                     <img
                       src={item.icon}
@@ -216,7 +231,7 @@ const Header = () => {
                     />
                   </span>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
 

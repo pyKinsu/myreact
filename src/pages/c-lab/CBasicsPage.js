@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import {
   FaSearch,
   FaCode,
-  FaArrowRight,
 } from "react-icons/fa";
 
 export default function CBasicsPage() {

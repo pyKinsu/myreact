@@ -19,7 +19,7 @@ export default function ProgramDetail() {
           </h1>
 
           <button
-            onClick={() => navigate("/c-lab/CBasicsPage")}
+            onClick={() => navigate("/c-lab/c-basics")}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg"
           >
             Back to Programs
@@ -38,7 +38,7 @@ export default function ProgramDetail() {
 
           {/* Back Button */}
           <button
-            onClick={() => navigate("/c-lab/CBasicsPage")}
+            onClick={() => navigate("/c-lab/c-basics")}
             className="mb-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md"
           >
             ← Back to Programs

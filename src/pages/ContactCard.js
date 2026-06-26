@@ -24,13 +24,13 @@ const ContactCard = () => {
 
         {/* Social Icons */}
         <div className="socials">
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+          <a href="https://github.com/pykinsu" target="_blank" rel="noreferrer">
             <img src="/Icons/github.svg" alt="GitHub" />
           </a>
-          <a href="https://www.linkedin.com/in/yourlinkedin/" target="_blank" rel="noreferrer">
-            <img src="/Icons/linkedin.svg" alt="LinkedIn" />
+          <a href="https://twitter.com/pykinsu" target="_blank" rel="noreferrer">
+            <img src="/Icons/twitter.svg" alt="Twitter / X" />
           </a>
-          <a href="mailto:yourmail@example.com">
+          <a href="mailto:pykinsu@outlook.com">
             <img src="/Icons/mail.svg" alt="Email" />
           </a>
         </div>
